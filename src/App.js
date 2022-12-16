@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 import { Background } from './components/Background.js';
 import { TodoContainer } from './features/Todo/TodoContainer';
 
