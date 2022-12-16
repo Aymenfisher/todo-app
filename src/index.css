@@ -19,6 +19,7 @@
     --Very-Dark-Grayish-Blue-d1: hsl(233, 14%, 35%);
     --Very-Dark-Grayish-Blue-d2: hsl(237, 14%, 26%);
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
     display: none;
@@ -146,6 +147,11 @@ button {
     flex-direction: column;
     gap: 20px;
 }
+.todo-body *{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
 
 /* styling box element */
 
@@ -204,6 +210,7 @@ button {
     all: unset;
     caret-color: var(--Bright-Blue);
     text-transform: capitalize;
+    width: 90%;
 }
 
 /* placeholder color */
@@ -244,12 +251,14 @@ button {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 70vh;
 }
 
 .todo-list {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    height: 40vh;
 }
 
 
@@ -261,6 +270,7 @@ button {
     align-items: center;
     gap: 10px;
     padding: 15px 20px;
+
 }
 
 .light .todo-item-box {
@@ -295,6 +305,7 @@ button {
 .todo-text {
     text-transform: capitalize;
     cursor: pointer;
+
 }
 
 .light .todo-text,
@@ -320,6 +331,12 @@ button {
 .todo-text-container {
     display: grid;
     grid-template: 100% / 95% 5%;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 .todo-text-container:hover #delete-button {
@@ -436,13 +453,13 @@ button {
         grid-template: 45px 45px / 1fr;
         gap: 10px;
     }
-    
+
     .clear-and-items {
         grid-area: 1/1/span 1/span 1;
         border-radius: 0 0 8px 8px;
         padding: 15px;
     }
-    
+
     .filter-buttons {
         font-size: 1rem;
         width: 100%;
@@ -450,7 +467,7 @@ button {
         grid-area: 2/1/span 1/span 1;
         border-radius: 8px;
         padding: 5px 15px;
-    
+
     }
 }
 
